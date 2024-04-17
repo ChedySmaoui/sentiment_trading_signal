@@ -117,7 +117,6 @@ class SentimentStrat(bt.Strategy):
             if len(self) >= (self.bar_executed + self.params.exitbars):
                     
                 self.log('SELL CREATE, %.2f' % self.dataclose[0])
-                    
                 # Keep track of the created order to avoid a 2nd order
                 self.order = self.sell(size=1000)
 
